@@ -1,0 +1,8 @@
+﻿  main.cpp
+c:\users\abraham\desktop\fall2017\csc326\ipaddress_lab_four\ipaddress_lab_four\linkedlist.h(44): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+  c:\users\abraham\desktop\fall2017\csc326\ipaddress_lab_four\ipaddress_lab_four\linkedlist.h(50): note: see reference to class template instantiation 'LinkedList<ItemType>' being compiled
+c:\users\abraham\desktop\fall2017\csc326\ipaddress_lab_four\ipaddress_lab_four\linkedlist.h(49): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+c:\users\abraham\desktop\fall2017\csc326\ipaddress_lab_four\ipaddress_lab_four\linkedlist.cpp(148): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+c:\users\abraham\desktop\fall2017\csc326\ipaddress_lab_four\ipaddress_lab_four\linkedlist.cpp(166): warning C4290: C++ exception specification ignored except to indicate a function is not __declspec(nothrow)
+  IPAddress_lab_four.vcxproj -> C:\Users\abraham\Desktop\Fall2017\CSC326\IPAddress_lab_four\Debug\IPAddress_lab_four.exe
+  IPAddress_lab_four.vcxproj -> C:\Users\abraham\Desktop\Fall2017\CSC326\IPAddress_lab_four\Debug\IPAddress_lab_four.pdb (Partial PDB)
