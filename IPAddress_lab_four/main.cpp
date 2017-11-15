@@ -9,8 +9,8 @@
 #include "Node.h"
 #include "PrecondViolatedExcep.h"
 
-void search(LinkedList<AddressItem>&, AddressItem &, int &); // pass an object as referece and loop through it	and use the overload operator to compare ip
-void print(LinkedList<AddressItem>&myaddress);
+void search(LinkedList<AddressItem>, AddressItem); // pass an object as referece and loop through it	and use the overload operator to compare ip
+void print(LinkedList<AddressItem> myaddress);
 
 int main() {
 
@@ -27,38 +27,52 @@ int main() {
 
 	while (!myfile.eof())
 	{
-		if (i == 1)
-		{
 			myfile >> myItem;
 			mylist.insert(i, myItem);
-		}
-		else {
-			myfile >> myItem;
-			search(mylist, myItem, i);
+			i++;
+	}
 
+	for (int i = 1; i <= mylist.getLength(); i++)
+	{
+		for (int j = i+1; j<= mylist.getLength(); j++)
+		{
+			if (mylist.getEntry(i).getAddress() == mylist.getEntry(j).getAddress())
+			{
+				mylist.remove(j);
+				mylist.getEntry(i).Tally();
+			    
+			 }
 		}
 	}
-	
+	print(mylist);
+	myfile.close();
 
-
-	//myfile >> myItem1;
-	//mylist.insert(i, myItem1);
-	//i++;
 	system("pause");
 	return 0;
 }
 
 
-void search(LinkedList<AddressItem> & mylist, AddressItem & myItem, int & i)
+//void search(LinkedList<AddressItem> mylist, AddressItem myItem)
+//{
+//	int i = mylist.getLength();
+//	while (i > 0) {
+//		if (mylist.getEntry(i).getAddress() == myItem.getAddress())
+//		{
+//			mylist.getEntry(i).Tally();
+//		}
+//	}	
+//	i--;
+//}
 
-{
-	if (mylist.getEntry(i).getAddress() == myItem.getAddress())
-	{
-		mylist.getEntry(i).Tally();
+
+void print(LinkedList<AddressItem> myaddress) {
+	int i = myaddress.getLength();
+
+	while (i > 0) {
+		cout << myaddress.getEntry(i).getAddress() <<endl;
+		cout << myaddress.getEntry(i).getCount() << endl;
+		i--;
 	}
-	i++;
 }
 
 
-void print(LinkedList<AddressItem>&myaddress) {
-}

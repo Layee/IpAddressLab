@@ -13,7 +13,7 @@ private:
 public:
 																											 
 	AddressItem();
-	void Tally(); // add one to address item’s count
+	void Tally(); //  one to address item’s count
 	 string getAddress();
 	//void setAddress(string newEntry);
 	int getCount();
