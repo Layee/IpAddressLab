@@ -15,8 +15,10 @@ void print(LinkedList<AddressItem> myaddress);
 int main() {
 
 	AddressItem myItem;
+	AddressItem temp;
 	ifstream myfile;
 	LinkedList<AddressItem> mylist;
+
 	int i = 1;
 
 	myfile.open("IpAddresses.txt");
@@ -38,8 +40,10 @@ int main() {
 		{
 			if (mylist.getEntry(i).getAddress() == mylist.getEntry(j).getAddress())
 			{
-				mylist.remove(j);
-				mylist.getEntry(i).Tally();
+				temp = mylist.getEntry(j);
+				 mylist.remove(j);
+				 temp.Tally();
+				 mylist.insert(j, temp);
 			    
 			 }
 		}

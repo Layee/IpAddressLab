@@ -7,7 +7,7 @@ using namespace std;
 
 AddressItem::AddressItem()
 {
-	count = 0;
+	count = 1;
 }
 
 void AddressItem::Tally() {
